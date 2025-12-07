@@ -1,0 +1,32 @@
+======================================================================
+ELEC-E8740 Part I Calibration Parameters
+======================================================================
+
+TASK 1: Gyroscope
+----------------------------------------
+Bias X: -0.032380 deg/s
+Bias Y: -0.203853 deg/s
+Bias Z: 0.187297 deg/s
+Variance X: 0.041372 (deg/s)^2
+Variance Y: 0.047666 (deg/s)^2
+Variance Z: 0.075577 (deg/s)^2
+
+TASK 2: Accelerometer
+----------------------------------------
+Gain k_x: 0.997466
+Gain k_y: 0.992926
+Gain k_z: 0.996125
+Bias b_x: 0.013628 g
+Bias b_y: -0.004227 g
+Bias b_z: 0.019261 g
+
+TASK 3: Camera
+----------------------------------------
+Focal length: 524.7240 pixels, this will used in Part II
+Bias: 3.4198 cm
+R^2: 0.999661
+
+TASK 4: Motor Speed
+----------------------------------------
+Speed at 30% PWM: 6.2307 cm/s
+Estimated full speed: 20.7690 cm/s

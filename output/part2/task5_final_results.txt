@@ -1,0 +1,86 @@
+Task 5: Static Localization - Final Results
+INPUTS:
+  Focal length: 524.7240 pixels
+  QR height: 11.5 cm
+  Detected QR codes: 9
+  Measurement noise: SIGMA_h=2.0 px, SIGMA_cx=3.0 px
+
+TRUE POSITION:
+  x = 59.50 cm
+  y = 26.00 cm
+  ж╫ = 90.00бу
+
+ESTIMATED POSITION:
+  x = 62.00 cm
+  y = 26.72 cm
+  ж╫ = 90.00бу
+
+ERRORS:
+  delta x = 2.50 cm
+  delta y = 0.72 cm
+  delta ж╫ = 0.00бу
+  Position error = 2.60 cm
+
+COVARIANCE (P):
+  sigma_x = 1.8188 cm
+  sigma_y = 0.4893 cm
+  sigma_ж╫ = 0.9869бу
+
+OPTIMIZATION:
+  Method: Levenberg-Marquardt
+  Success: True
+  Function evaluations: 13
+  Jacobian evaluations: 1
+  Final cost: 34.575017
+
+RESIDUAL STATISTICS:
+  Residual norm: 8.3156
+  Mean residual: 1.5892
+  Max residual: 4.2221
+
+JACOBIAN MATRIX J at final estimate
+Matrix dimension: (18, 3) = (2*9 measurements, 3 states)
+State vector: x = [p_x, p_y, psi]
+Measurement vector: y = [h_1, Cx_1, h_2, Cx_2, ..., h_n, Cx_n]
+
+                   d/dp_x       d/dp_y       d/dpsi
+dh_3 /dx         0.0863       0.6546       0.0000
+dCx_3/dx        -5.5362       0.7301    -533.8508
+
+dh_2 /dx         0.0035       0.6717       0.0000
+dCx_2/dx        -5.5362       0.0292    -524.7386
+
+dh_9 /dx         0.1576       0.6096       0.0000
+dCx_9/dx        -5.5362       1.4311    -559.7854
+
+dh_15/dx        -0.1602       0.6073       0.0000
+dCx_15/dx        -5.5362      -1.4603    -561.2311
+
+dh_7 /dx         0.2434       0.4709       0.0000
+dCx_7/dx        -5.5362       2.8622    -664.9698
+
+dh_8 /dx         0.2084       0.5488       0.0000
+dCx_8/dx        -5.5362       2.1028    -600.4252
+
+dh_14/dx        -0.2120       0.5430       0.0000
+dCx_14/dx        -5.5362      -2.1612    -604.6892
+
+dh_1 /dx        -0.0797       0.6572       0.0000
+dCx_1/dx        -5.5362      -0.6717    -532.4489
+
+dh_13/dx        -0.2434       0.4709       0.0000
+dCx_13/dx        -5.5362      -2.8622    -664.9698
+
+JACOBIAN MATRIX DERIVATION:
+Measurement model:
+  h_i = (h0 * f) / d_i,  where d_i = sqrt[(s_x - p_x)^2 + (s_y - p_y)^2]
+  Cx_i = f * tan(phi_i), where phi_i = arctan((s_y - p_y)/(s_x - p_x)) - psi
+
+Jacobian elements:
+  dh_i/dp_x  = (h0 * f) * (s_x - p_x) / d_i^3
+  dh_i/dp_y  = (h0 * f) * (s_y - p_y) / d_i^3
+  dh_i/dpsi  = 0
+
+  dCx_i/dp_x = f * sec^2(phi_i) * [-(s_y - p_y) / d_i^2]
+  dCx_i/dp_y = f * sec^2(phi_i) * [(s_x - p_x) / d_i^2]
+  dCx_i/dpsi = -f * sec^2(phi_i)

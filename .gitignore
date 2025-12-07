@@ -19,7 +19,5 @@ Thumbs.db
 logs/
 *.log
 
-# Project artifacts (not tracked)
-data/
-output/
+# Project artifacts (not tracked）
 .history/
