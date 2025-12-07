@@ -15,10 +15,8 @@ A collection of sensor fusion tasks and algorithms (e.g., calibration, EKF, part
 - `code/part1_solution.py`
 - `code/task5_solution.py`
 - `code/task6_solution.py`
-- `code/task67_solution.py`
 - `code/task7_ekf_optimal.py`
 - `code/task7_particle_filter.py`
-- `code/task7_particle_filter_fixed.py`
 
 ## Getting Started
 
